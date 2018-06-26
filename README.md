@@ -2,7 +2,7 @@
 
 This is a demo implementation of a semi-modal view like iOS Music app.
 
-<video autoplay loop width=222 src="demo.mp4"></video>
+<img src="demo.gif">
 
 # Classes
 
