@@ -7,10 +7,8 @@ This is a demo implementation of a semi-modal view like iOS Music app.
 # Classes
 
 - FrontPlayerViewController.swift
-
 - [SemiModalTransition](https://github.com/usagimaru/SemiModalTransition)
-
-- [ButterflyHandle](https://github.com/usagimaru/SemiModalTransition)
+- [ButterflyHandle](https://github.com/usagimaru/ButterflyHandle)
 
 # License
 
