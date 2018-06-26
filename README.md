@@ -1,2 +1,17 @@
 # Musical-View
-A semi modal view implementation like Apple's Music app.
+
+This is a demo implementation of a semi-modal view like iOS Music app.
+
+<video autoplay width=222 src="demo.mp4"></video>
+
+# Classes
+
+- FrontPlayerViewController.swift
+
+- [SemiModalTransition](https://github.com/usagimaru/SemiModalTransition)
+
+- [ButterflyHandle](https://github.com/usagimaru/SemiModalTransition)
+
+# License
+
+See [LICENSE](LICENSE) for details.
