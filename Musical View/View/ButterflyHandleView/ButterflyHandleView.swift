@@ -14,6 +14,16 @@ class ButterflyHandleView: UIView {
 		case bottom
 	}
 
+	/// 定数定義
+	struct Constant {
+		/// 翼の色
+		static let defaultWingColor = UIColor(displayP3Red: 0.82, green: 0.82, blue: 0.84, alpha: 1.0)
+		/// 片翼の傾き
+		static let wingFoldingAngle: CGFloat = (22.5 * CGFloat.pi / 180)
+		/// 片翼の大きさ
+		static let wingSize = CGSize(width: 20, height: 5)
+	}
+
 	var direction: direction = .top {
 		didSet {
 			self.isSpreading = self._isSpreading
@@ -32,11 +42,13 @@ class ButterflyHandleView: UIView {
 		}
 	}
 	
-	private let wingColor = UIColor(displayP3Red: 0.82, green: 0.82, blue: 0.84, alpha: 1.0)
-	private let wingFoldingAngle: CGFloat = (22.5 * CGFloat.pi / 180)
-	
 	private var leftWing = UIView()
 	private var rightWing = UIView()
+
+	var wingColor: UIColor = ButterflyHandleView.Constant.defaultWingColor
+
+
+	// MARK: -
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -65,10 +77,10 @@ class ButterflyHandleView: UIView {
 	}
 	
 	private func wingBuilder() -> UIView {
-		let wing = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 5))
+		let wing = UIView.initWithSize(ButterflyHandleView.Constant.wingSize)
 		wing.clipsToBounds = true
 		wing.backgroundColor = self.wingColor
-		wing.cornerRadius = wing.height / 2
+		wing.cornerRadius = ButterflyHandleView.Constant.wingSize.height / 2
 		return wing
 	}
 	
@@ -81,14 +93,10 @@ class ButterflyHandleView: UIView {
 		self._isSpreading = true
 		
 		if animated {
-			UIView.perform(.delete,
-						   on: [],
-						   options: .beginFromCurrentState,
-						   animations: {
-							self.leftWing.transform = CGAffineTransform(rotationAngle: 0)
-							self.rightWing.transform = CGAffineTransform(rotationAngle: 0)
-			},
-						   completion: nil)
+			UIView.animateWithSystemMotion({
+				self.leftWing.transform = CGAffineTransform(rotationAngle: 0)
+				self.rightWing.transform = CGAffineTransform(rotationAngle: 0)
+			}, completion: nil)
 		}
 		else {
 			self.leftWing.transform = CGAffineTransform(rotationAngle: 0)
@@ -98,18 +106,15 @@ class ButterflyHandleView: UIView {
 	
 	func flap(animated: Bool) {
 		self._isSpreading = false
-		
-		let angle = self.direction == .top ? self.wingFoldingAngle : -self.wingFoldingAngle
+
+		let wingFoldingAngle = ButterflyHandleView.Constant.wingFoldingAngle
+		let angle = self.direction == .top ? -wingFoldingAngle : wingFoldingAngle
 		
 		if animated {
-			UIView.perform(.delete,
-						   on: [],
-						   options: .beginFromCurrentState,
-						   animations: {
-							self.leftWing.transform = CGAffineTransform(rotationAngle: angle)
-							self.rightWing.transform = CGAffineTransform(rotationAngle: -angle)
-			},
-						   completion: nil)
+			UIView.animateWithSystemMotion({
+				self.leftWing.transform = CGAffineTransform(rotationAngle: angle)
+				self.rightWing.transform = CGAffineTransform(rotationAngle: -angle)
+			}, completion: nil)
 		}
 		else {
 			self.leftWing.transform = CGAffineTransform(rotationAngle: angle)

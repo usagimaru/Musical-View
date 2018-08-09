@@ -70,10 +70,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="637"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8st-Jw-Ao6" userLabel="Back Jacket Frame View">
-                                                <rect key="frame" x="55" y="53.5" width="264" height="264"/>
+                                                <rect key="frame" x="53" y="53.5" width="268" height="268"/>
                                                 <subviews>
                                                     <imageView verifyAmbiguity="off" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6vK-hQ-s9Z">
-                                                        <rect key="frame" x="0.0" y="67.5" width="264" height="128"/>
+                                                        <rect key="frame" x="0.0" y="69.5" width="268" height="128"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="128" placeholder="YES" id="chQ-Zd-pP0"/>
                                                         </constraints>
@@ -93,10 +93,10 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7n-lP-JgU" userLabel="Front Jacket Frame View">
-                                                            <rect key="frame" x="32" y="30" width="311" height="311"/>
+                                                            <rect key="frame" x="30" y="30" width="315" height="315"/>
                                                             <subviews>
                                                                 <imageView verifyAmbiguity="off" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEG-qB-a3q">
-                                                                    <rect key="frame" x="0.0" y="91" width="311" height="128"/>
+                                                                    <rect key="frame" x="0.0" y="93" width="315" height="128"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -111,14 +111,14 @@
                                                             </constraints>
                                                         </view>
                                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="U1Z-3K-Ukf">
-                                                            <rect key="frame" x="30" y="541" width="315" height="31"/>
+                                                            <rect key="frame" x="30" y="545" width="315" height="31"/>
                                                         </slider>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="O7n-lP-JgU" secondAttribute="trailing" constant="32" id="4CL-ag-Imx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="O7n-lP-JgU" secondAttribute="trailing" constant="30" id="4CL-ag-Imx"/>
                                                         <constraint firstItem="U1Z-3K-Ukf" firstAttribute="top" secondItem="O7n-lP-JgU" secondAttribute="bottom" constant="200" id="7qQ-PM-AGC"/>
                                                         <constraint firstItem="U1Z-3K-Ukf" firstAttribute="leading" secondItem="FKM-ZE-UF2" secondAttribute="leading" constant="32" id="AKQ-xr-qDa"/>
-                                                        <constraint firstItem="O7n-lP-JgU" firstAttribute="leading" secondItem="FKM-ZE-UF2" secondAttribute="leading" constant="32" id="PyY-e8-y8t"/>
+                                                        <constraint firstItem="O7n-lP-JgU" firstAttribute="leading" secondItem="FKM-ZE-UF2" secondAttribute="leading" constant="30" id="PyY-e8-y8t"/>
                                                         <constraint firstItem="O7n-lP-JgU" firstAttribute="top" secondItem="FKM-ZE-UF2" secondAttribute="top" constant="30" id="SlE-Rk-V8J"/>
                                                         <constraint firstAttribute="trailing" secondItem="U1Z-3K-Ukf" secondAttribute="trailing" constant="32" id="TC0-CE-kk2"/>
                                                     </constraints>

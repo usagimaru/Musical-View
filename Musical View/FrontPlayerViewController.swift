@@ -75,6 +75,7 @@ class FrontPlayerViewController: UIViewController {
 		self.frontJacketView.image = self.jacketImage
 		self.backJacketView.image = self.jacketImage
 		self.contentViewHeightConstraint.constant = self.contentHeight
+		self.butterflyHandle.direction = .bottom
     }
 
     override func didReceiveMemoryWarning() {

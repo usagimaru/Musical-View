@@ -120,5 +120,22 @@ extension UIView {
 		
 		return nil
 	}
+
+
+	// MARK: -
+
+	class func initWithSize(_ size: CGSize) -> UIView {
+		return UIView(frame: CGRect(x: 0, y: 0,
+									width: size.width,
+									height: size.height))
+	}
+
+	class func animateWithSystemMotion(_ animations: (() -> Void)?, completion: ((Bool) -> Void)?) {
+		UIView.perform(.delete,
+					   on: [],
+					   options: [.beginFromCurrentState, .allowUserInteraction],
+					   animations: animations,
+					   completion: completion)
+	}
 	
 }
